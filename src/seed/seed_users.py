@@ -1,18 +1,18 @@
 """
-This script seeds the MongoDB 'users' collection with a set of predefined and randomly generated user documents.
+This script seeds the MongoDB `users_col` collection with user data for development or testing purposes.
 
-- Imports necessary modules for fake data generation, password hashing, and database connection.
-- Defines two real user accounts (admin and user) with hashed passwords.
-- Generates additional fake users using the Faker library, each with a unique email and random avatar.
-- All users have timestamps for creation and last update.
-- Inserts all user documents into the MongoDB collection and prints the number of users seeded.
+- Imports necessary libraries for generating fake data, hashing passwords, and database connection.
+- Defines two real users with admin and user roles, including hashed passwords and verification tokens.
+- Generates additional fake users using the Faker library, assigning random names, emails, avatars, and verification tokens.
+- Inserts all users into the MongoDB collection and prints the number of users seeded.
 
 Usage:
-    Run this script to populate the 'users' collection for development or testing purposes.
+    Run `PYTHONPATH=src python src/seed/seed_users.py` from the root folder to execute the seeding process.
 """
 
-from faker import Faker
+from typing import Union
 from datetime import datetime, timezone
+from faker import Faker
 from bcrypt import hashpw, gensalt
 from julseb_lib_python_utils.get_random_avatar import get_random_avatar
 from julseb_lib_python_utils.get_random_string import get_random_string
@@ -20,7 +20,6 @@ from utils.connect_db import users_col
 
 fake = Faker()
 
-from typing import Union
 
 hashed_pw = hashpw("Password42".encode("utf-8"), gensalt(10))
 

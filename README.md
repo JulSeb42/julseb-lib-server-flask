@@ -23,7 +23,7 @@ A starter Flask backend with MongoDB, JWT authentication, CORS, and user managem
 ### 1. Clone and install dependencies
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/JulSeb42/julseb-lib-server-flask.git
 cd server-flask
 python -m venv .venv
 source .venv/bin/activate

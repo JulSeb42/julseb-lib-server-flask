@@ -1,0 +1,19 @@
+
+[project]
+name = "flask-mongodb-boilerplate"
+version = "0.1.0"
+description = "A starter Flask backend with MongoDB, JWT authentication, CORS, and user management."
+authors = [{ name = "Julien Sebag", email = "julien.sebag@me.com" }]
+dependencies = [
+    "Flask",
+    "flask-cors",
+    "gunicorn",
+    "pymongo",
+    "bcrypt",
+    "Faker",
+    "python-dotenv"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
