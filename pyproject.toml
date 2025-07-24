@@ -1,6 +1,5 @@
-
 [project]
-name = "flask-mongodb-boilerplate"
+name = "julseb-lib-boilerplate-fullstack-server"
 version = "0.1.0"
 description = "A starter Flask backend with MongoDB, JWT authentication, CORS, and user management."
 authors = [{ name = "Julien Sebag", email = "julien.sebag@me.com" }]
